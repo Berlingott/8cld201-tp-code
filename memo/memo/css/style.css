@@ -1,0 +1,120 @@
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+}
+
+container {
+  display : grid;
+  place-items : center;
+  min-height : 100vh;
+}
+
+@font-face {
+  font-family : CaveatBrush;
+  src : url("../font/CaveatBrush-Regular.ttf");
+}
+
+.heading{
+  text-align : center;
+  font-family : "CaveatBrush";
+  font-size : 75px;
+}
+
+.cards {
+  display : grid;
+  place-items : center;
+  grid-template-columns : repeat(6,1fr);
+  grid-gap : 2em;
+}
+
+.card{
+  height : 200px;
+  width : 180px;
+  display : grid;
+  place-items : center;
+  background-color : #0077b3;
+  border-radius : 10px;
+  cursor : pointer;
+  transition : 0.3s all ease;
+}
+
+.card:hover{
+  transform : scale(1.03);
+  border : 1px solid #003b5d;
+}
+
+.card img{
+  width : 80%;
+  max-height : 180px;
+  opacity : 0;
+  transition : 0.3s all ease;
+}
+
+.card.clicked{
+  background-color : #fff;
+}
+
+.card.checked{
+  background-color : #ffd700;
+}
+
+.card.clicked img, .card.checked img{
+  opacity : 1;
+}
+
+.card.shake{
+  background-color : #d01500aa;
+  animation : shake 0.5s;
+}
+
+@keyframes shake{
+0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.found {
+  pointer-events : none;
+}
+
+/*.container{
+  opacity : 0.75;
+  margin : 1em;
+  width : 100vw;
+  height : 100vh;
+}
+
+.container:hover{
+  opacity : 1;
+}
+
+.case {
+  display : inline-block;;
+  background-color : #9991;
+  border : 1px solid #0000;
+  border-radius : 10px;
+  opacity : 0;
+}
+
+.case.flip {
+  opacity : 1;
+}
+
+.case.flip{
+  background-color : #9990;
+}
+
+.case:hover{
+  border : 1px solid #f00;
+  border-radius : 10px;
+}
+*/
