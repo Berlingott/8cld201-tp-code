@@ -1,0 +1,65 @@
+/*.button_choice {
+  border : outset 1px #000;
+  padding : 300px 200px;
+  color : #fff;
+  font-family : 'Caveat Brush', cursive;
+  font-size : 50px;
+  text-align : center;
+  margin : 0px;
+}
+*/
+.centerg {
+  position : absolute;
+  top : 45%;
+  bottom : auto;
+  left : 15%;
+  right : auto;
+  display : flex;
+}
+.centerd {
+  position : absolute;
+  top : 45%;
+  bottom : auto;
+  left : auto;
+  right : 15%;
+  display : flex;
+}
+
+
+body {
+  margin : 0;
+  overflow : hidden;
+}
+
+div > div {
+  display : inline-block;
+  color : #fff;
+  font-family : 'Caveat Brush', cursive;
+  font-size : 50px;
+  text-align : center;
+  margin : 0px;
+  opacity: 0.75;
+  width : 50vw;
+  float : left;
+  height : 100vh;
+}
+
+div > div:hover {
+  opacity : 1.0;
+}
+
+.button_jai {
+  background-color : #0077b3;
+}
+
+.button_jaipas {
+  background-color : #d03f15;
+}
+
+.choix1{
+  background-color : #222299;
+}
+
+.choix2{
+  background-color : #a00;
+}

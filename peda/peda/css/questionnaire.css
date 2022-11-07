@@ -1,0 +1,62 @@
+h1 {
+  font-family : 'Caveat Brush', cursive;
+  font-size : 50px;
+  color : #003a5d;
+  margin : 0;
+  top : 10%;
+}
+
+div{
+  text-align : center;
+}
+
+body {
+  margin : 0;
+}
+
+.image {
+  position : absolute;
+}
+
+.droite {
+  right : 2%;
+  top : 1%;
+}
+
+.gauche {
+  left : 2%;
+  top : 1%;
+}
+
+.head {
+  margin : 0;
+  vertical-align : center;
+  background-color : #fff;
+}
+
+.block {
+  float : left;
+  width : calc(50% - 50px);
+  opacity : 0.75;
+  text-align : center;
+  padding : 25px;
+}
+
+.block:hover {
+  opacity : 1.0;
+}
+
+.centerg {
+  position : relative;
+  top : calc(50% - 50px);
+}
+.centerd {
+  position : relative;
+  top : calc(50% - 50px);
+}
+
+div > label {
+  color : #fff;
+  font-family : 'Caveat Brush', cursive;
+  font-size : 50px;
+}

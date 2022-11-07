@@ -1,0 +1,17 @@
+button {
+  margin : 10px;
+  background-color : #fff;
+  border : 1px solid #999;
+  font-family : 'Sarabun';
+  font-size : 30px;
+  border-radius : 10px;
+}
+
+video {
+  border : 1px solid #000;
+}
+
+body {
+  margin : 0;
+}
+

@@ -1,0 +1,99 @@
+h1 {
+  color : #fff;
+  font-family : 'Caveat Brush', cursive;
+  margin : 10px 25px;
+  padding : 10px 25px;
+  font-size : 50px;
+}
+
+a {
+  width : auto;
+  height : auto;
+}
+.nb1{
+  width : 33vw;
+}
+.nb1 > a > img{
+  max-width : 33vw;
+  height : auto;
+  border : 10px solid #af9500;
+  border-radius : 100%;
+  filter : grayscale(100%);
+}
+.nb1 > a > img:hover{
+  filter : grayscale(0);
+}
+
+.nb1:hover h1{
+  visibility : visible;
+}
+
+.nb1 > h1 {
+  visibility : hidden;
+  background-color : #af9500aa;
+  border-radius : 10px;
+  border : 10px solid #af9500;
+}
+.nb2 > a > img{
+  max-width : 20vw;
+  height : auto;
+  border : 10px solid #b4b4b4;
+  border-radius : 100%;
+  filter : grayscale(100%);
+}
+.nb2 > a > img:hover{
+  filter : grayscale(0);
+}
+.nb2:hover > h1{
+  visibility : visible;
+}
+
+.nb2 > h1 {
+  visibility : hidden;
+  background-color : #b4b4b4aa;
+  border : 10px solid #b4b4b4;
+  border-radius : 10px;
+}
+
+.nb3 > a > img{
+  max-width : 10vw;
+  height : auto;
+  border : 10px solid #ad8a56;
+  border-radius : 100%;
+  filter : grayscale(100%);
+}
+.nb3 > a > img:hover{
+  filter : grayscale(0);
+}
+
+.nb3:hover h1{
+  visibility : visible;
+}
+
+.nb3 > h1 {
+  visibility : hidden;
+  background-color : #ad8a56aa;
+  border : 10px solid #ad8a56;
+  border-radius : 10px;
+}
+
+#contain{
+  display : flex;
+  width : 100vw;
+  height : 100vh;
+  text-align : center;
+}
+
+#contain > *{
+  margin : 0 75px;
+}
+#head {
+  text-align : center;
+  width : 100vw;
+  height : auto;
+}
+
+#head > h1 {
+  font-size : 50px;
+}
+
