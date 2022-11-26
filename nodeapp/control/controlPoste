@@ -1,0 +1,107 @@
+const Post = require ("../models/postmodel")
+
+exports.getAllPoste = async (req, res, next) => {
+    try{
+
+        
+        const postes = await Post.find();
+
+
+        res.status(200).json({
+            status: "success",
+            results: postes.length,
+            data: {
+                postes,
+            },
+        });
+    } catch (e) {
+    res.status(500).json({
+        status: "fail"
+    })
+    }
+};
+
+exports.getOnePoste = async (req, res, next) => {
+    try{
+
+        
+        const postes = await Post.findById(req.param.id);
+
+
+        res.status(200).json({
+            status: "success",
+            results: postes.length,
+            data: {
+                postes,
+            },
+        });
+    } catch (e) {
+    res.status(500).json({
+        status: "fail"
+    })
+    }
+};
+
+exports.createPoste = async (req, res, next) => {
+    try{
+
+        
+        const postes = await Post.create(req.body);
+
+
+        res.status(200).json({
+            status: "success",
+            results: postes.length,
+            data: {
+                postes,
+            },
+        });
+    } catch (e) {
+    res.status(500).json({
+        status: "fail"
+    })
+    }
+};
+
+exports.updatePoste = async (req, res, next) => {
+    try{
+
+        
+        const postes = await Post.findByIdAndUpdate(req.param.id, req.body, {
+            new: true,
+            runValidators: true
+        });
+
+
+        res.status(200).json({
+            status: "success",
+            results: postes.length,
+            data: {
+                postes,
+            },
+        });
+    } catch (e) {
+    res.status(500).json({
+        status: "fail"
+    })
+    }
+};
+
+exports.deletePoste = async (req, res, next) => {
+    try{
+
+        
+        const postes = await Post.findByIdAndDelete(req.param.id);
+
+
+        res.status(200).json({
+            status: "success",
+            results: postes.length,
+        });
+    } catch (e) {
+    res.status(500).json({
+        status: "fail"
+    })
+    }
+};
+
