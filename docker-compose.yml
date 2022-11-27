@@ -3,7 +3,7 @@ services:
   node-app:
     build: ./nodeapp
     ports:
-      - "300:3000"
+      - "3000:3000"
     environment:
       - PORT=3000
       - MONGO_USER=simon
@@ -21,6 +21,8 @@ services:
 
     volumes:
       - mongo-database-volume:/data/db
-
+  rediscontainer:
+    image: redis
+    
 volumes:
   mongo-database-volume:

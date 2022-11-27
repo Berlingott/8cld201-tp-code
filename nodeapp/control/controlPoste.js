@@ -1,21 +1,18 @@
-const Post = require ("../models/postmodel")
+const Post = require("../models/postmodel")
 
 exports.getAllPoste = async (req, res, next) => {
     try{
-
-        
-        const postes = await Post.find();
-
-
+        const posts = await Post.find();
         res.status(200).json({
             status: "success",
-            results: postes.length,
+            results: posts.length,
             data: {
-                postes,
+                posts,
             },
         });
     } catch (e) {
-    res.status(500).json({
+    console.log(e);
+    res.status(400).json({
         status: "fail"
     })
     }
@@ -23,16 +20,11 @@ exports.getAllPoste = async (req, res, next) => {
 
 exports.getOnePoste = async (req, res, next) => {
     try{
-
-        
-        const postes = await Post.findById(req.param.id);
-
-
+        const posts = await Post.findById(req.params.id);
         res.status(200).json({
             status: "success",
-            results: postes.length,
             data: {
-                postes,
+                posts,
             },
         });
     } catch (e) {
@@ -43,41 +35,32 @@ exports.getOnePoste = async (req, res, next) => {
 };
 
 exports.createPoste = async (req, res, next) => {
-    try{
-
-        
-        const postes = await Post.create(req.body);
-
-
+    try {
+        const post = await Post.create(req.body);
         res.status(200).json({
             status: "success",
-            results: postes.length,
             data: {
-                postes,
+                post,
             },
         });
     } catch (e) {
+    console.log(e);
     res.status(500).json({
-        status: "fail"
+        status: "fail" + e
     })
     }
 };
 
 exports.updatePoste = async (req, res, next) => {
     try{
-
-        
-        const postes = await Post.findByIdAndUpdate(req.param.id, req.body, {
+        const posts = await Post.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
             runValidators: true
         });
-
-
         res.status(200).json({
             status: "success",
-            results: postes.length,
             data: {
-                postes,
+                posts,
             },
         });
     } catch (e) {
@@ -89,14 +72,9 @@ exports.updatePoste = async (req, res, next) => {
 
 exports.deletePoste = async (req, res, next) => {
     try{
-
-        
-        const postes = await Post.findByIdAndDelete(req.param.id);
-
-
+        const posts = await Post.findByIdAndDelete(req.params.id);
         res.status(200).json({
             status: "success",
-            results: postes.length,
         });
     } catch (e) {
     res.status(500).json({
