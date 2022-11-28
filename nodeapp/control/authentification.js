@@ -37,6 +37,7 @@ exports.connexion = async (req, res) => {
      const bonMotdepasse= await bcrypt.compare(motdepasse, utilisateur.motdepasse)
 
      if(bonMotdepasse){
+        //req.session.utilisateur = utilisateur;
         res.status(200).json({
             status:"success"
         });

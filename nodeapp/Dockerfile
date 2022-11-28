@@ -5,6 +5,7 @@ RUN npm install
 RUN npm install mongoose
 RUN npm install express
 RUN npm install bcryptjs
+RUN npm install redis connect-redis express-session
 COPY . ./
 ENV PORT 3000
 EXPOSE $PORT
