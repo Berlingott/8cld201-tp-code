@@ -37,8 +37,8 @@ mongoose
 );*/
 
 app.use(express.json());
-app.get("/", (req, res) => {
-    res.send ("<h2> Voyons voyons</h2>");
+app.get("/home", (req, res) => {
+    res.send ("<h2> Ceci est une page Web.</h2>");
 });
 app.use("/api/postes", postRouter);
 app.use("/api/utilisateurs", utilisateurRouter);

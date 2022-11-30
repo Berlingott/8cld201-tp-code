@@ -1,0 +1,16 @@
+POST  http://localhost:3000/api/utilisateurs/connexion
+
+{
+    "pseudo": "user1a",
+    "motdepasse": "user"
+}
+
+POST http://localhost:3000/api/utilisateurs/enregistrerUtilisateur
+
+{
+    "pseudo": "user1a",
+    "motdepasse": "user"
+}
+
+
+http://localhost:3000/api/postes
