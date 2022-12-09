@@ -3,7 +3,7 @@ services:
   nginx: 
     image: nginx:1.13.8-alpine
     ports:
-      - "3000:80"
+      - "80:80"
     depends_on:
       - mongodatabase
       - node-app
